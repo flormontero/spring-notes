@@ -23,7 +23,7 @@ dependencies {
 	//compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '4.1.7.Final'
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
 	compile group:'org.xerial', name:'sqlite-jdbc', version: '3.30.1'
-	compile 'com.zsoltfabok:sqlite-dialect:1.0'
+	compile 'com.enigmabridge:hibernate4-sqlite-dialect:0.1.2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

@@ -1,5 +1,6 @@
 package com.flordev.notes;
 
+import com.flordev.notes.Model.NoteRepository;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,7 +14,7 @@ public class HelloController {
 
 
 	@RequestMapping("/hola")
-	public String hola() {
+	public String hola(NoteRepository n) {
 		return "Hola!";
 	}
 }
