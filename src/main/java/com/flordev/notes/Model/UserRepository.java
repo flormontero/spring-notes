@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserRepository extends CrudRepository<User, Long> {
 
-    Note findByName(String name);
-    Note findById(long id);
+    User findByName(String name);
+    User findById(long id);
 }
 

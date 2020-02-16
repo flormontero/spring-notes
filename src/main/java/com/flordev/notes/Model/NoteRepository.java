@@ -8,5 +8,7 @@ public interface NoteRepository extends CrudRepository<Note, Long> {
     Note findByTitle(String title);
     List<Note> findByUser(User user);
     Note findById(long id);
+
+
 }
 
