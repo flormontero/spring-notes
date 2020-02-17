@@ -41,9 +41,16 @@
             padding-bottom: 0.5em;
             margin-bottom: 1em;
         }
+        .main-title{
+            text-align: center;
+            margin: 40px;
+            color: darkslategrey;
+
+        }
     </style>
 </head>
 <body>
+<h1 class="main-title">NOTES</h1>
 <form class="form container" action="/note/create" method="post">
     <label for="user">Username</label>
     <input type="text" id="user" name="user" value="" >
@@ -56,7 +63,7 @@
     </div>
 
     <input type="submit" value="Submit">
-</form>>
+</form>
 <div class="note" th:each="note: ${notes}">
     <div class="note-title" th:text="${note.title} +' de '+${note.user.getName()}"  />
     <div class="note-content" th:text="${note.content}" />

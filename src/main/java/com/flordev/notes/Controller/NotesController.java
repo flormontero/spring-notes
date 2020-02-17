@@ -16,10 +16,7 @@ import org.w3c.dom.Node;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -35,6 +32,7 @@ public class NotesController {
 	public String index(Model model) {
 		ArrayList<Note> notes  =  new ArrayList<Note>();
 		noteRepository.findAll().forEach(notes::add);
+		Collections.reverse(notes);
 		model.addAttribute("notes",notes);
 		return "index";
 	}
