@@ -1,7 +1,11 @@
 package com.flordev.notes.Model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+
 import com.flordev.notes.Model.User;
 
 
@@ -25,6 +29,7 @@ public class Note {
         this.user = user;
     }
     public Note(){}
+
 
 
 
