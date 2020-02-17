@@ -37,22 +37,12 @@ public class NotesController {
 		return "index";
 	}
 
-
-	@RequestMapping("/prueba")
-	public String prueba(Model model) {
-		ArrayList<Note> notes  =  new ArrayList<Note>();
-		noteRepository.findAll().forEach(notes::add);
-		int count=0;
-		for (int i = 0; i < notes.size(); i++) {
-			count++;
-		}
-		String title= notes.stream().filter(note -> note.getId()>0).map(note -> note.getTitle()).findFirst().orElse("");
-
-
-
-		return "index";
+	@RequestMapping("/deleteall")
+	public RedirectView deleteAll() {
+		noteRepository.deleteAll();
+		userRepository.deleteAll();
+		return new RedirectView("/");
 	}
-
 
 
 	@PostMapping("/note/create")
