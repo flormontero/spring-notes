@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes Administrator</title>
+</head>
+<body>
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+
+<div class="note" th:each="note: ${notes}">
+    <div class="note-user" th:text="${note.user.getName()}" />
+    <div class="note-title" th:text="${note.title}" />
+    <div class="note-content" th:text="${note.content}" />
+</div>
+</body>
+</html>
